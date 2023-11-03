@@ -51,6 +51,7 @@ describe("Intheritance - Birth class", () => {
   "178",
   "9.2",
   "Un Hobbit llamado Frodo Baggins emprende un viaje épico para destruir el anillo malévolo y evitar que caiga en manos del Señor Oscuro");
+  
   it("should gets title year genre,duration,rating and synopsis for El Señor de los Anillos", () => {
     expect(movieTest.title).toBe("El Señor de los Anillos: La Comunidad del Anillo"),
     expect(movieTest.year).toBe(2001),
