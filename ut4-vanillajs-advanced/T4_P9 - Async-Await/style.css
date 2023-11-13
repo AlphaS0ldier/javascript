@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container div p{
+    margin:5px;
+    border: 1px solid;
+    border-radius: 2px;
+    height: 50%;
+    text-align: center;
+}
