@@ -23,7 +23,10 @@ export const filterCar = async (array, type, value) => {
   return new Promise((resolve) => {
     if (value == "ALL") {
       resolve(array);
-    } else {
+    }else if(type == "year") {
+      resolve(array.filter((car) => car[`${type.toLowerCase()}`] >= value));
+    }
+     else {
       resolve(array.filter((car) => car[`${type.toLowerCase()}`] == value));
     }
   });

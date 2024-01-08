@@ -7,6 +7,8 @@ let cars =await getApi();
 let arr = ["Year", "Make", "Model", "Type"];
 arr.forEach((element) => createFilter(element,cars));
 
+await createItemsFromCars(cars);
+
 let arrOption = document.querySelectorAll(".filters div");
 
 arrOption.forEach((element) => {
