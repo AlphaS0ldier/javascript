@@ -15,3 +15,5 @@ export async function getApi(){try {
 	console.error(error);
 }
 }
+
+console.log(await getApi());
