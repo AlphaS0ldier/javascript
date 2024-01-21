@@ -1,0 +1,40 @@
+<h1>Directive IF Component</h1>
+<div class="container">
+  <p (mouseover)="showNgIf()">Working with *ngIf</p>
+  <p (mouseover)="showAif()">Working with {{ text }}</p>
+</div>
+<div class="container">
+  <p *ngIf="ngif==true">Text displayed with ngIf directive</p>
+  @if (aif==true) {
+    <p>Text displayed with {{text}} directive</p>
+  }
+</div>
+
+<h1>Directive Else Component</h1>
+<div id="form" class="row g-3">
+  <div class="col-12">
+    <label for="inputEmail4" class="form-label">Name</label>
+    <input #name type="email" class="form-control" id="name" placeholder="Enter name">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Surname</label>
+    <input #surname type="text" class="form-control" id="surname" placeholder="Enter surname">
+  </div>
+  <div class="col-md-6">
+    <button (click)="changeNamSur('pre17')" class="btn btn-primary">Log in by &lt;17v </button>
+  </div>
+  <div class="col-md-6">
+    <button (click)="changeNamSur('post17')" class="btn btn-primary">Log in by =&gt;17v </button>
+  </div>
+  <span *ngIf="pre17==false;else pre17span">No one registered by &lt;17v</span>
+
+  <ng-template #pre17span><span>{{namsur}} registered by &lt;17v</span></ng-template>
+
+  @if (post17==false) {
+    <span>No one registered by =&gt;17v</span>
+  }
+  @else {
+    <span>{{namsur}} registered by &lt;17v</span>
+  }
+
+</div>

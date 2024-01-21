@@ -1,0 +1,14 @@
+<div>
+  <h1>Counter implemented in Angular</h1>
+  <hr />
+  <p>Counter: {{ value }}</p>
+  <input class="btn btn-outline-dark" (click)="operation('minus')" type="button" value="-" />
+  @if(toggle()==false){
+  <input
+  class="btn btn-outline-dark"
+    (click)="operation('reset')"
+    type="button"
+    value="Reset"
+  />}
+  <input class="btn btn-outline-dark" (click)="operation('sum')" type="button" value="+" />
+</div>
