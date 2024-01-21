@@ -1,0 +1,11 @@
+<h1>Directive IF Component</h1>
+<div>
+  <p (mouseover)="showNgIf()">Working with *ngIf</p>
+  <p (mouseover)="showAif()">Working with {{ text }}</p>
+</div>
+<div>
+  <p *ngIf="ngif==true">Text displayed with ngIf directive</p>
+  @if (aif==true) {
+    <p>Text displayed with {{text}} directive</p>
+  }
+</div>
