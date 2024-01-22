@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container *{
+    margin: 0 10px;
+    width: 30%;
+}
+

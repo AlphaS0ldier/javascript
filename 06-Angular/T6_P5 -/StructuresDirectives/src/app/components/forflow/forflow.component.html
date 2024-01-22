@@ -1,0 +1,13 @@
+<h3>For Flow Control</h3>
+<ul class="list-group">
+    @for (car of objcars;track car.id;){
+    <ul class="list-group-item">
+        <h6>Cars {{ $index + 1 }}:</h6>
+        <li>{{ car.year }}</li>
+        <li>{{ car.make }}</li>
+        <li>{{ car.model }}</li>
+        <li>{{ car.type }}</li>
+      </ul>
+    }
+</ul>
+

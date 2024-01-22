@@ -1,0 +1,10 @@
+<h3>ngFor Directive</h3>
+<ul class="list-group">
+  <ul class="list-group-item" *ngFor="let car of objcars; index as i">
+    <h6>Cars {{ i + 1 }}:</h6>
+    <li>{{ car.year }}</li>
+    <li>{{ car.make }}</li>
+    <li>{{ car.model }}</li>
+    <li>{{ car.type }}</li>
+  </ul>
+</ul>
