@@ -1,0 +1,16 @@
+<div class="container">
+  @for (movie of movies; track movie.id) {
+    <div class="card" style="width: 18rem">
+      <img
+        src={{movie.image}}
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <p class="card-text"><span>Movie: </span>{{movie.title}}</p>
+        <p class="card-text"><span>Premiere: </span>{{movie.year}}</p>
+        <p class="card-text"><span>Stars: </span>{{movie.stars}}</p>
+      </div>
+    </div>
+  }
+</div>

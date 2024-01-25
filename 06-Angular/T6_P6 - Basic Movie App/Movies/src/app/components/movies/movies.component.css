@@ -1,0 +1,13 @@
+p span{
+    font-weight: bold;
+}
+
+.container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.container div{
+    margin: 5px;
+}
