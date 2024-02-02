@@ -1,1 +1,4 @@
-<app-child-component [item]="currentItem"></app-child-component>
+<h1>Parent Component</h1>
+<input type="text" #inputText>
+<hr>
+<app-child-component [item]="currentItem" (textEvent)="inputText.value=$event" (textEventPress)="inputText.value=$event"></app-child-component>
