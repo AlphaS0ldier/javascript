@@ -1,6 +1,7 @@
+<h2>Movie Selected: <span #title></span></h2>
+<hr>
 <div class="container">
-    @for (movie of moviesList; track movie.id) {
-        <app-movie [movie]="movie"></app-movie>
-    }
-  </div>
-  
+  @for (movie of moviesList; track movie.id) {
+  <app-movie [movie]="movie" (MovieTitleEvent)="title.textContent=$event"></app-movie>
+  }
+</div>

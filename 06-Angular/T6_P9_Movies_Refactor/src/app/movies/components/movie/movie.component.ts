@@ -1,4 +1,5 @@
-import { Component,Input } from '@angular/core';
+import { Component,EventEmitter,Input,Output } from '@angular/core';
+import { Movie } from '../../../../interfaces/Movies';
 
 @Component({
   selector: 'app-movie',
@@ -7,5 +8,12 @@ import { Component,Input } from '@angular/core';
 })
 export class MovieComponent {
   @Input()
-  public movie:any;
+  public movie!:Movie;
+
+  @Output()
+  public MovieTitleEvent:EventEmitter<string>=new EventEmitter<string>();
+
+  public addMovieTitle(value:string):void{
+    this.MovieTitleEvent.emit(value);
+  }
 }

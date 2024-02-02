@@ -1,12 +1,9 @@
 <div class="card">
-    <img
-      src={{movie.image}}
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <p class="card-text"><span>Movie: </span>{{movie.title}}</p>
-      <p class="card-text"><span>Premiere: </span>{{movie.year}}</p>
-      <p class="card-text"><span>Stars: </span>{{movie.stars}}</p>
-    </div>
+  <img src="{{ movie.image }}" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <p class="card-text"><span>Movie: </span>{{ movie.title }}</p>
+    <p class="card-text"><span>Premiere: </span>{{ movie.year }}</p>
+    <p class="card-text"><span>Stars: </span>{{ movie.stars }}</p>
   </div>
+  <input class="btn btn-primary" type="button" value="Click me" (click)="addMovieTitle(movie.title)"/>
+</div>
