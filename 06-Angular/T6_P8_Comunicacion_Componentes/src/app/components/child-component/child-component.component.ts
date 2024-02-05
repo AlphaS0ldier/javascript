@@ -1,4 +1,5 @@
 import { Component,EventEmitter,Input,Output } from '@angular/core';
+import { TestService } from '../../service/test-service.service';
 
 @Component({
   selector: 'app-child-component',
@@ -20,5 +21,11 @@ export class ChildComponentComponent {
 
   public addNewItemPress(value:string):void{
     this.textEvent.emit(value);
+  }
+
+  public title:string;
+
+  constructor(public testService:TestService ) {
+    this.title=testService.titleChild;
   }
 }
