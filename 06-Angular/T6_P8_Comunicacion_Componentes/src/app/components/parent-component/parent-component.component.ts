@@ -6,12 +6,12 @@ import { TestService } from '../../service/test-service.service';
   styleUrl: './parent-component.component.css'
 })
 export class ParentComponentComponent {
-  public currentItem:string=" Hello World";
-
-  public title:string;
 
   constructor(public testService:TestService ) {
-    this.title=testService.titleParent;
   }
+
+  public currentItem:string=" Hello World";
+
+  public title:string=this.testService.titleParent;
 
 }

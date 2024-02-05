@@ -7,6 +7,9 @@ import { TestService } from '../../service/test-service.service';
   styleUrl: './child-component.component.css'
 })
 export class ChildComponentComponent {
+  constructor(public testService:TestService ) {
+  }
+
   @Input()
   public item:string='';
   @Output()
@@ -23,9 +26,6 @@ export class ChildComponentComponent {
     this.textEvent.emit(value);
   }
 
-  public title:string;
+  public title:string=this.testService.titleChild;
 
-  constructor(public testService:TestService ) {
-    this.title=testService.titleChild;
-  }
 }
