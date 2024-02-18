@@ -1,0 +1,67 @@
+@if(pokemon.id>-1){
+<div class="card">
+  <img
+    src="{{ pokemon.sprites.front_default }}"
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
+    <p class="card-text"><span>Name:</span>{{ pokemon.name }}</p>
+    @for (ability of pokemon.abilities; track $index) {
+    @if(ability.is_hidden==true){
+    <p class="card-text"><span>Hidden Ability</span>{{ ability.name }}</p>
+    }@else {
+    <p class="card-text">
+      <span>Ability {{ $index + 1 }}</span
+      >{{ ability.name }}
+    </p>
+    } } @for (stat of pokemon.stats; track $index) {
+    <p class="card-text">
+      <span>{{ stat.name }} </span>{{ stat.base_stat }}
+    </p>
+    } @for (type of pokemon.types; track $index) {
+    <p class="card-text">
+      <span>Type {{ $index + 1 }}</span
+      >{{ type.name }}
+    </p>
+    }
+    <input
+      class="btn btn-primary"
+      type="button"
+      value="Regenerate"
+      (click)="addPokemonIdGen(pokemon.id)"
+    />
+    <input
+      class="btn btn-danger"
+      type="button"
+      value="Remove Pokemon"
+      (click)="addPokemonId(pokemon.id)"
+    />
+  </div>
+</div>
+}@else {
+<div class="card">
+  <img
+    src="{{ pokemon.sprites.front_default }}"
+    class="card-img-top"
+    id="error"
+    alt="..."
+  />
+  <div class="card-body">
+    <p class="card-title">POKÉMON NO ENCONTRADO</p>
+    <p class="card-text">{{ pokemon.id }}</p>
+  </div>
+  <input
+  class="btn btn-primary"
+  type="button"
+  value="Regenerate"
+  (click)="addPokemonIdGen(pokemon.id)"
+/>
+  <input
+    class="btn btn-danger"
+    type="button"
+    value="Remove Pokemon"
+    (click)="addPokemonId(pokemon.id)"
+  />
+</div>
+}

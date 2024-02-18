@@ -1,0 +1,22 @@
+p span{
+    font-weight: bold;
+    margin-right: auto;
+}
+p {
+display: flex;
+}
+div{
+    margin: 5px;
+    width: 18rem;
+    height: 100%;
+}
+
+#error{
+    width: 30%;
+    height: auto;
+    margin: 10px auto;
+}
+
+input{
+    width: 100%;
+}

@@ -1,0 +1,11 @@
+<h2>Pokemon Selected: <span #title></span></h2>
+<hr />
+<div class="container">
+  @for (pokemon of pokemonsList; track pokemon.id) {
+  <app-pokemon
+    [pokemon]="pokemon"
+    (PokemonIdEvent)="sendMainPokemonId($event)"
+    (PokemonIdGenEvent)="sendMainPokemonIdGen($event)"
+  ></app-pokemon>
+  }
+</div>

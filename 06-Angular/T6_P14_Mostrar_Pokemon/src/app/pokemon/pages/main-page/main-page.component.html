@@ -1,0 +1,8 @@
+<div id="logo">
+    <img src="../../../../assets/pokemon-logo.png">
+</div>
+<hr />
+<app-pokemon-list [pokemonsList]="pokemonsList" (sendMainPokemonIdEvent)="sendIdToService($event)" (sendMainPokemonIdEventGen)="regeneratePokemon($event)"></app-pokemon-list>
+<div>
+    <input type="button" class="btn btn-primary" value="Generar Pokemon" (click)="generatePokemons()">
+</div>

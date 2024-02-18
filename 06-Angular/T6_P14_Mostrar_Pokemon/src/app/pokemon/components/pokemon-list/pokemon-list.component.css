@@ -1,0 +1,12 @@
+.container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.container>*{
+    margin: 5px;
+}
+h2{
+    text-align: center;
+}
